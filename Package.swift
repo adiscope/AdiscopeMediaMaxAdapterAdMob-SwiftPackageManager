@@ -28,8 +28,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "AdiscopeMediaMaxAdapterAdMob",
-            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/4.3.0/AdiscopeMediaMaxAdapterAdMob.zip",
-            checksum: "a2b9727411a0cc1d3db798a3a80aab3a96ff5a4cbe451f211dc47e1b6856fcf1"
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/4.4.1/AdiscopeMediaMaxAdapterAdMob.zip",
+            checksum: "0375a5b5e278dceb3f08f64c3c9e2c623f352e313e59e841a93a477daefa734d"
         ),
     ]
 )
