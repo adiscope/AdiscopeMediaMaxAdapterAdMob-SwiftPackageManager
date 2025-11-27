@@ -13,14 +13,15 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.1.0"),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", exact: "12.2.0"),
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.4.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", exact: "12.11.0"),
     ],
     targets: [
         .target(
             name: "AdiscopeMediaMaxAdapterAdMobTarget",
             dependencies: [
                 .target(name: "AdiscopeMediaMaxAdapterAdMob"),
+                .target(name: "AdiscopeMediaMaxAdapterAdMobMediationAdapter"),
                 .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
@@ -28,8 +29,13 @@ let package = Package(
         ),
         .binaryTarget(
             name: "AdiscopeMediaMaxAdapterAdMob",
-            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/4.4.1/AdiscopeMediaMaxAdapterAdMob.zip",
-            checksum: "0375a5b5e278dceb3f08f64c3c9e2c623f352e313e59e841a93a477daefa734d"
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.0.0/AdiscopeMediaMaxAdapterAdMob.zip",
+            checksum: "b35ce2b32f118dbb7f3ce014e94de49b5329f7d81d77f697fe33f123b87741eb"
+        ),
+        .binaryTarget(
+            name: "AdiscopeMediaMaxAdapterAdMobMediationAdapter",
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.0.0/AppLovinMediationGoogleAdapter.xcframework.zip",
+            checksum: "00a4a083a8fa9a244f7672acc1155280fab8812a78c98989f3ccabfeb290a090"
         ),
     ]
 )
